@@ -9,13 +9,10 @@ const PostCreate = () => {
         await axios.post('http://localhost:4000/posts', {
             title
         });
-        setTitle('');
     };
     const onSubmit = async (event) => {
         event.preventDefault();
-        await axios.post('http://localhost:4000/posts', {
-            title
-        });
+        await makePostRequest(title);
         setTitle('');   
     }
     return (
